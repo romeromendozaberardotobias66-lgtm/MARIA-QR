@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MARIA QR - Tutoriales</title>
+
+    <!-- Fuentes y estilo -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        header {
+            background: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        header img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            animation: rotar 4s linear infinite;
+        }
+        @keyframes rotar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #262626;
+            padding: 12px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #00d0ff;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background-image: url('img/Negro y Blanco con Formas y Elementos Gráficos Banner para YouTube.png'); /* Banner personalizado */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            animation: aparecer 1.5s ease-out;
+        }
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: bold;
+            text-shadow: 0 0 12px #000;
+        }
+        .hero p {
+            font-size: 22px;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .btn-youtube {
+            margin-top: 25px;
+            display: inline-block;
+            background: #ff0000;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .btn-youtube:hover {
+            background: #cc0000;
+            transform: scale(1.1);
+        }
+
+        .videos {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .video-card {
+            background: #1b1b1b;
+            padding: 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+            animation: deslizar 1s ease-out;
+        }
+        @keyframes deslizar {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .video-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 0 15px #00d0ff;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 38px; }
+            .hero p { font-size: 18px; }
+            header img { width: 45px; height: 45px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/maria qr.png" alt="Logo Maria QR"> <!-- Logo -->
+        MARIA QR
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#tutoriales">Tutoriales</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <h1>Bienvenidos a MARIA QR</h1>
+        <p>Tu canal de tutoriales, guías y soluciones rápidas.</p>
+
+        <a class="btn-youtube" href="https://www.youtube.com/@MariaQr" target="_blank">
+             Ir al Canal!!
+        </a>
+    </section>
+
+    <section class="videos" id="tutoriales">
+        <div class="video-card">
+            <iframe src="https://youtu.be/ktzuRFf5tHk" allowfullscreen></iframe>
+            <h3>GAMEPLEY</h3>
+            <p>MIRA ESTE VIDEO INTERESANTE!!</p>
+        </div>
+        <div class="video-card">
+            <iframe src="https://kick.com/majogamedt" allowfullscreen></iframe>
+            <h3>CANAL DE KICK</h3>
+            <p>DIVIERTE UN RATO!!.</p>
+        </div>
+        <div class="video-card">
+            <iframe src="https://youtu.be/zCVK6ys1fX4" allowfullscreen></iframe>
+            <h3>DESCARGA MINECRAFT GRATIS!!</h3>
+            <p>MIRA ESTE TRUQUITOO!!</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 MARIA QR | Página creada por María José
+    </footer>
+</body>
+</html>
